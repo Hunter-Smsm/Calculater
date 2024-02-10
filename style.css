@@ -25,7 +25,7 @@ body {
 .contanier {
     border: 1px solid yellow;
     flex-grow: 1;
-    height: 100vh;
+    height: 80vh;
     padding: 20px;
     border-radius: 10px;
     position: relative;
@@ -34,7 +34,7 @@ body {
 @media (min-width: 768px) {
     .contanier {
         max-width: 400px;
-        height: 80vh;
+        height: 100vh;
     }
 }
 
