@@ -34,6 +34,7 @@ body {
 @media (min-width: 768px) {
     .contanier {
         max-width: 400px;
+        height: 80vh;
     }
 }
 
