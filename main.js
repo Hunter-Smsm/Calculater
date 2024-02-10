@@ -21,6 +21,7 @@ let num1 = "",
 let used = false;
 
 function buttons() {
+    document.querySelector("audio").currentTime = 0;
     document.querySelector("audio").play();
     if (this.innerHTML === "=") {
         if (op === "+") {
@@ -55,7 +56,7 @@ function buttons() {
         num2 += this.innerHTML;
     }
     document.querySelector(".result span").innerHTML = `${num1} ${op} ${num2}`;
-    if (!(this.classList.contains("op"))) {
+    if (!this.classList.contains("op")) {
         this.classList.add("btnc");
         setTimeout(() => {
             this.classList.remove("btnc");
