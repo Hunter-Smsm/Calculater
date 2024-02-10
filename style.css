@@ -13,8 +13,12 @@
     top: 0;
 }
 
+html {
+    height: 100%;
+}
+
 body {
-    height: 100vh;
+    height: 100%;
     background-color: black;
     display: flex;
     justify-content: center;
@@ -25,7 +29,7 @@ body {
 .contanier {
     border: 1px solid yellow;
     flex-grow: 1;
-    height: 80vh;
+    height: 100%;
     padding: 20px;
     border-radius: 10px;
     position: relative;
@@ -34,7 +38,6 @@ body {
 @media (min-width: 768px) {
     .contanier {
         max-width: 400px;
-        height: 100vh;
     }
 }
 
