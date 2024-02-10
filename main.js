@@ -1,14 +1,14 @@
 document.getElementById("color").onchange = function () {
     let color = document.getElementById("color").value;
-    document.styleSheets[0].cssRules[7].style.setProperty(
+    document.styleSheets[0].cssRules[8].style.setProperty(
         "border-color",
         `${color}`
     );
-    document.styleSheets[0].cssRules[8].style.setProperty(
+    document.styleSheets[0].cssRules[9].style.setProperty(
         "background-color",
         `${color}`
     );
-    document.styleSheets[0].cssRules[9].style.setProperty(
+    document.styleSheets[0].cssRules[10].style.setProperty(
         "box-shadow",
         `0 0 20px 2px ${color}`
     );
