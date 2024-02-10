@@ -55,7 +55,7 @@ function buttons() {
         num2 += this.innerHTML;
     }
     document.querySelector(".result span").innerHTML = `${num1} ${op} ${num2}`;
-    if (!(this.classList.contains("op") || this.classList.contains("ope"))) {
+    if (!(this.classList.contains("op"))) {
         this.classList.add("btnc");
         setTimeout(() => {
             this.classList.remove("btnc");
