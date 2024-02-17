@@ -1,16 +1,32 @@
-document.getElementById("color").onchange = function () {
-    let color = document.getElementById("color").value;
+if (localStorage.color) {
     document.styleSheets[0].cssRules[8].style.setProperty(
         "border-color",
-        `${color}`
+        `${localStorage.color}`
     );
     document.styleSheets[0].cssRules[9].style.setProperty(
         "background-color",
-        `${color}`
+        `${localStorage.color}`
     );
     document.styleSheets[0].cssRules[10].style.setProperty(
         "box-shadow",
-        `0 0 20px 2px ${color}`
+        `0 0 20px 2px ${localStorage.color}`
+    );
+    document.getElementById("color").value = localStorage.color;
+}
+
+document.getElementById("color").onchange = function () {
+    localStorage.color = document.getElementById("color").value;
+    document.styleSheets[0].cssRules[8].style.setProperty(
+        "border-color",
+        `${localStorage.color}`
+    );
+    document.styleSheets[0].cssRules[9].style.setProperty(
+        "background-color",
+        `${localStorage.color}`
+    );
+    document.styleSheets[0].cssRules[10].style.setProperty(
+        "box-shadow",
+        `0 0 20px 2px ${localStorage.color}`
     );
 };
 
@@ -21,8 +37,8 @@ let num1 = "",
 let used = false;
 
 function buttons() {
-    document.querySelector("audio").currentTime = 0;
-    document.querySelector("audio").play();
+    let audio = document.querySelector("audio").cloneNode();
+    audio.play();
     if (this.innerHTML === "=") {
         if (op === "+") {
             num1 = +num1 + +num2;
