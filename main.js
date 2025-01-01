@@ -15,13 +15,22 @@ const handelBtnClick = (e) => {
 		btn.textContent !== "X" &&
 		btn.textContent !== "Ac"
 	) {
-		result.textContent += btn.textContent;
+		if (
+			btn.textContent === "+" ||
+			btn.textContent === "-" ||
+			btn.textContent === "*" ||
+			btn.textContent === "/"
+		) {
+			result.innerHTML += `<span>${btn.textContent}</span>`;
+		} else {
+			result.innerHTML += btn.textContent;
+		}
 	} else if (btn.textContent === "=") {
 		result.textContent = eval(result.textContent);
 	} else if (btn.textContent === "Ac") {
 		result.textContent = "";
 	} else {
-		result.textContent = result.textContent.substring(
+		result.innerHTML = result.innerHTML.substring(
 			0,
 			result.textContent.length - 1
 		);

@@ -8,8 +8,10 @@
 	--app-bg-color: #daf0ff;
 
 	--calculator-bg-color: #17181a;
+	--calculator-box-shadow: #006bb5;
 
 	--result-text-color: white;
+	--result-span-text-color: #109dff;
 
 	--clear-bg-color: #616161;
 	--clear-text-color: #a5a5a5;
@@ -37,7 +39,7 @@ body {
 	border-radius: 39px;
 	background-color: var(--calculator-bg-color);
 	padding: 33px;
-	box-shadow: 40px 20px 80px 0 #006bb5;
+	box-shadow: 40px 20px 80px 0 var(--calculator-box-shadow);
 }
 
 .calculator .result {
@@ -49,6 +51,10 @@ body {
 	color: var(--result-text-color);
 	display: flex;
 	justify-content: flex-end;
+}
+
+.calculator .result span {
+	color: var(--result-span-text-color);
 }
 
 .calculator .buttons {
