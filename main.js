@@ -4,9 +4,6 @@ const allBtns = document.querySelectorAll(".calculator .buttons button");
 const handelBtnClick = (e) => {
 	const btn = e.target;
 	btn.classList.add("dark");
-	const audio = document.createElement("audio");
-	audio.src = "./sounds/mixkit-arcade-game-jump-coin-216.wav";
-	audio.play();
 	setTimeout(() => {
 		btn.classList.remove("dark");
 	}, 200);
